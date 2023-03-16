@@ -3,35 +3,50 @@
         "browser": true,
         "es2021": true
     },
+    "parser": "@typescript-eslint/parser",
     "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
         "standard-with-typescript",
         "prettier"
     ],
     "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": [
+            "tsconfig.json"
+        ],
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        },
+        "react": {
+            "version": "detect"
+        }
     },
     "plugins": [
+        "@typescript-eslint",
+        "import",
         "react"
     ],
-    "rules": {},
-    "settings": {
-        "sort-imports": [
-            "error",
-            {
-                "ignoreCase": false,
-                "ignoreDeclarationSort": false,
-                "ignoreMemberSort": false,
-                "memberSyntaxSortOrder": [
-                    "none",
-                    "all",
-                    "multiple",
-                    "single"
-                ],
-                "allowSeparatedGroups": false
-            }
-        ]
+    "root": true,
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
     }
 }
