@@ -1,5 +1,5 @@
 {
-	"name": "crm-react",
+	"name": "my-vite-template-with-typescript",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -10,13 +10,18 @@
 		"prettier": "prettier --write ."
 	},
 	"dependencies": {
+		"localforage": "^1.10.0",
+		"match-sorter": "^6.3.1",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.9.0",
+		"sort-by": "^1.2.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.27",
 		"@types/react-dom": "^18.0.10",
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
+		"@typescript-eslint/parser": "^5.55.0",
 		"@vitejs/plugin-react": "^3.1.0",
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.7.0",
